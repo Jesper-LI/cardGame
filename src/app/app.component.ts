@@ -9,4 +9,10 @@ import { Card } from "./card";
 })
 export class AppComponent {
   title = 'cardGame';
+  cardset!: Card[];
+  boardClass = 'board4';
+  boardSize = 4
+  boardSizes = {
+    sizes: [4, 5, 6]
+  };
 }

@@ -1,5 +1,20 @@
 <div class="container">
    <div class="row">
-      <app-card></app-card>
+      <div data-role="header" data-position="fixed">
+         <div id="intro">
+           <!-- <select id="select_fs" (change)="onSelectFieldSize($event)">
+             <option value="" disabled selected>select fieldsize</option>
+             <option *ngFor="let boardSize of boardSizes.sizes" value="{{boardSize}}">{{boardSize}} x {{boardSize}}</option>
+           </select> -->
+         </div>
+       </div>
+      <div role="main" class="ui-content">
+         <div id="board" class="cf">
+           <div id="field" class="cf">
+             <app-card class="{{boardClass}}" [class.picked]="card.picked" *ngFor="let card of cardset" [card]="card"></app-card>
+               <!-- (click)="onClickCard(card)" -->
+           </div>
+         </div>
+       </div>
    </div>
 </div>

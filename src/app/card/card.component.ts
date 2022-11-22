@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
 
   @Input() card!: Card; //Not nice, fix this
   constructor() {
-
+    
   }
 
   getBackgroundImage(item: Card) {
