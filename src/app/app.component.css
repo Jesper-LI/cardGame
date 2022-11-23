@@ -1,3 +1,23 @@
 .board4 {
     width: 25%;
 }
+
+.board4, .board5, .board6 {
+	display: block;
+	float: left;
+	padding: 5px;
+	box-sizing:border-box;
+}
+
+#field>div {
+	float: left;	
+}
+
+#field div div {
+	margin: 5px;
+	background-size: contain;
+}
+#field {
+    width:100%;
+    margin:0 auto;
+    }
