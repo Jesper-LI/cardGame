@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable, timer, Subscription } from 'rxjs';
 import { Card } from "./card";
 import { CardService } from './services/card.service';
+import { GameplayService } from './gameplay.service';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,7 @@ export class AppComponent {
     sizes: [4, 5, 6]
   };
   numberOfPictures = 0;
-  constructor(private cardService: CardService) { }
+  constructor(private cardService: CardService, private gameplayService: GameplayService) { }
   onClickStartButton(event: Event) {
     let input = event.target as HTMLInputElement
     this.cardService.getCardset(Number(input.value)).subscribe((data: Card[]) => {
@@ -25,5 +26,7 @@ export class AppComponent {
         this.numberOfPictures = this.cardset$.length / 2;
     });
   }
-
+  onClickCard(card:Card) {
+    this.gameplayService.handleMoves(card);   
+  }
 }

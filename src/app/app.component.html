@@ -12,8 +12,7 @@
       <div role="main" class="ui-content">
          <div id="board" class="cf">
            <div id="field" class="cf">
-             <app-card class="{{boardClass}}" [class.picked]="card.picked" *ngFor="let card of cardset$" [card]="card"></app-card>
-               <!-- (click)="onClickCard(card)" -->
+             <app-card class="{{boardClass}}" [class.picked]="card.picked" *ngFor="let card of cardset$" [card]="card" (click)="onClickCard(card)"></app-card>
            </div>
          </div>
        </div>
