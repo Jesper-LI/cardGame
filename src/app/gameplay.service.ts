@@ -11,6 +11,6 @@ export class GameplayService {
 
   handleMoves(card:Card) {
     console.log(card);
-    
+    card.selected=true;
   }
 }
